@@ -33,7 +33,7 @@ const ShowPeers: FC<ShowPeersProps> = ({
             Object.values(peerIds).length === 0
               ? "my-5 h-full w-[60vw]"
               : "md:h-[60vh] md:w-[40vw] w-full",
-            "bg-gray-900",
+            "bg-gray-600/10",
             "relative flex flex-shrink-0 items-center justify-center rounded-lg border border-gray-600/50 bg-gray-600/10 backdrop-blur-sm shadow-lg"
           )}
         >
