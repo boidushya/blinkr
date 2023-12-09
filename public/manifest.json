@@ -1,0 +1,19 @@
+{
+  "id": "blinkr",
+  "name": "Blinkr",
+  "short_name": "Blinkr",
+  "description": "Meet new people, make new friends",
+  "icons": [
+    {
+      "src": "./logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#262944",
+  "background_color": "#FFFFFF",
+  "start_url": "/",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait"
+}

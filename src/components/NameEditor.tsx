@@ -52,12 +52,12 @@ const NameEditor: React.FC<Props> = ({ displayName }) => {
   };
 
   return (
-    <div className="flex w-fit bg-black flex-shrink text-slate-100 absolute bottom-1 left-1 rounded-md py-1 px-2 font-lg gap-2 justify-start items-center">
+    <div className="flex w-fit bg-gray-500/50 shadow-custom flex-shrink text-gray-200 absolute bottom-4 left-4 rounded-md py-1 px-2 font-lg gap-2 justify-start items-center">
       {isEditing ? (
         <div className="flex w-fit justify-start items-center">
           <input
             title="displayName"
-            className="flex bg-transparent w-28 text-white outline-dashed outline-1 outline-white truncate px-1 rounded-sm"
+            className="flex bg-transparent w-28 text-white outline-dashed outline-1 outline-gray-200/50 truncate px-1 mr-2 rounded-sm"
             type="text"
             value={editedDisplayName}
             onChange={handleInputChange}
@@ -78,7 +78,9 @@ const NameEditor: React.FC<Props> = ({ displayName }) => {
             {`${editedDisplayName ?? "Blinkr"} (You)` ?? "Blinkr (You)"}
           </span>
           <div className="flex justify-start items-center">
-            <div onClick={handleEditClick}>{BasicIcons.pencil}</div>
+            <div className="text-gray-300" onClick={handleEditClick}>
+              {BasicIcons.pencil}
+            </div>
             <div className="w-6 h-6">{BasicIcons.ping}</div>
           </div>
         </div>

@@ -9,10 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ducanh2912/next-pwa": "^9.7.2",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
-    "@huddle01/react": "1.0.0-alpha.32",
-    "@huddle01/server-sdk": "1.0.0-alpha.4",
+    "@huddle01/react": "^1.0.0-alpha.58",
+    "@huddle01/server-sdk": "^1.0.0-alpha.25",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^0.9.480",
     "@upstash/redis": "^1.23.3",

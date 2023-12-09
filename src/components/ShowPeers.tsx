@@ -1,6 +1,4 @@
-import {
-  usePeerIds
-} from "@huddle01/react/hooks";
+import { usePeerIds } from "@huddle01/react/hooks";
 import clsx from "clsx";
 import dynamic from "next/dynamic";
 import Image from "next/image";
@@ -25,19 +23,18 @@ const ShowPeers: FC<ShowPeersProps> = ({
   camTrack,
   isVideoOn,
 }) => {
-
   const { peerIds } = usePeerIds();
 
   return (
-    <div className="my-5 flex h-[75vh] items-center justify-center self-stretch">
-      <div className="flex h-full grid-cols-2 items-center justify-center gap-10 rounded-lg ">
+    <div className="my-5 mt-12 flex h-[75vh] items-center justify-center self-stretch md:px-0 px-4">
+      <div className="flex h-full grid-cols-2 md:flex-row flex-col w-full items-center justify-center gap-10 rounded-lg ">
         <div
           className={clsx(
             Object.values(peerIds).length === 0
               ? "my-5 h-full w-[60vw]"
-              : "h-[60vh] w-[40vw]",
+              : "md:h-[60vh] md:w-[40vw] w-full",
             "bg-gray-900",
-            "relative flex flex-shrink-0 items-center justify-center rounded-lg border border-zinc-800 bg-transparent"
+            "relative flex flex-shrink-0 items-center justify-center rounded-lg border border-gray-600/50 bg-gray-600/10 backdrop-blur-sm shadow-lg"
           )}
         >
           {isVideoOn ? (
@@ -56,7 +53,7 @@ const ShowPeers: FC<ShowPeersProps> = ({
             </div>
           )}
           <div className="flex">
-          <NameEditor displayName={`${displayName ?? 'Gotilo'}`}/>
+            <NameEditor displayName={`${displayName ?? "Blinkr User"}`} />
           </div>
         </div>
         {Object.values(peerIds).length > 0 &&

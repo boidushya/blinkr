@@ -68,7 +68,7 @@ const ItsAMatch = () => {
   return (
     <div className="w-full h-full flex flex-col sm:flex-row justify-evenly items-center mt-32">
       <div className="w-[50vw] h-[70vh] rounded-lg">
-        <div className="w-full h-full bg-black rounded-md flex flex-col items-center justify-evenly">
+        <div className="w-full h-full rounded-md flex flex-col items-center justify-evenly">
           <Realistic />
           <h1 className="text-white text-3xl font-bold">It&apos;s a Match!</h1>
           <div className="flex justify-evenly items-center w-full h-full relative">
