@@ -15,11 +15,11 @@ export default function App({ Component, pageProps }: AppProps) {
     <div className={`relative h-full ${satoshi.className}`}>
       <NextProgress
         delay={300}
-        height="6px"
+        height="2px"
         options={{
           showSpinner: false,
         }}
-        color="#800080"
+        color="#9683EC"
       />
       <WalletContextProvider>
         <HuddleProvider client={huddleClient}>
