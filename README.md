@@ -7,9 +7,9 @@ Blinkr is a revolutionary platform designed to bring crypto enthusiasts and NFT 
 
 - **Superpowered Connections:** Discover and connect with like-minded individuals who share your crypto interests and NFT passions.
 
-- **Wallet-Powered Matching:** Blinkr leverages the information stored in users' wallets to facilitate more meaningful and personalized connections.
+- **Wallet-Powered Matching:** Blinkr leverages the information stored in users' wallets to facilitate more meaningful and personalized connections thanks to AirStack.
 
-- **NFT-Powered Chat:** Engage in conversations with fellow users who care about the same crypto projects and NFTs, powered by cutting-edge technology.
+- **NFT-Powered Chat:** Engage in conversations with fellow users who care about the same crypto projects and NFTs, powered by Huddle01.
 
 # Upcoming Features
 
@@ -61,7 +61,7 @@ Get ready to connect with like-minded crypto enthusiasts in a whole new way. Sta
 1. Start the Blinkr server:
 
     ```bash
-    npm start
+    npm run start
     ```
 
 2. Access Blinkr in your browser at `http://localhost:3000`.
