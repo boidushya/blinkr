@@ -1,6 +1,9 @@
 
 # Blinkr - Connect with Superpowered Friends
 
+![image](https://github.com/boidushya/blinkr/assets/26746725/dfebf1de-985c-497e-8b5e-d80927c0574d)
+
+
 Blinkr is a revolutionary platform designed to bring crypto enthusiasts and NFT collectors together in a meaningful way. This GitHub repository contains the source code and documentation for the Blinkr project.
 
 ## Features
