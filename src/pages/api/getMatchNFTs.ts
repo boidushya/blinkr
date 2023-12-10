@@ -1,4 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
+import { init, fetchQuery } from "@airstack/airstack-react";
+import { useAccount } from "wagmi";
+import { getQuery } from "./query";
+
+
+init('14e63c5e8aa0648b2856bfcd50b7771a7');
 
 interface APIData {
   success: boolean;
@@ -78,6 +84,27 @@ interface collectionData {
   collection_chain_id: number;
 }
 
+const getNFTs = async(req: NextApiRequest, res: NextApiResponse)=>{
+  const { walletAddress } = req.body;
+   console.log(walletAddress);
+  const query  = getQuery(walletAddress)
+
+  const { data : nftData, error } = await fetchQuery(query);
+  console.log("should get the nfts");
+  console.log(nftData , error); 
+  const allNfts: any[] = [];
+//  console.log(nftData.Polygon.TokenBalance[0]);
+  const nfts = nftData.Polygon.TokenBalance.map((val: any)  => allNfts.push(val.tokenAddress))
+  // find nfts with collection address in collections array
+  console.log(nfts);
+  let filteredNFTs = allNfts?.filter((nft: NFTData) =>
+    collections.find(
+      (collection) => collection.collection_address === nft.contract_address
+    )
+  );
+
+}
+
 const matchNFTs = async (req: NextApiRequest, res: NextApiResponse) => {
   // const address = "2pgp7NaXWqycNJ7kaFF9uvs2MQ1hd3dG2Gh27VUUzxcA";
   const { walletAddress } = req.body;
@@ -112,6 +139,7 @@ const matchNFTs = async (req: NextApiRequest, res: NextApiResponse) => {
       (collection) => collection.collection_address === nft.contract_address
     )
   );
+
 
   // check if user has 400 dev dao tokens
   const tokenURL = `https://api.chainbase.online/v1/account/tokens?chain_id=1&address=${walletAddress}&contract_address=0xb24cd494faE4C180A89975F1328Eab2a7D5d8f11&limit=20&page=1`;
