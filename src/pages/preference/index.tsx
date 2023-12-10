@@ -167,16 +167,13 @@ const About: NextPage = () => {
               handleCardSelect("0xb24cd494faE4C180A89975F1328Eab2a7D5d8f11");
               addPreference({
                 address: "0xb24cd494faE4C180A89975F1328Eab2a7D5d8f11",
-                imageUri:
-                  "https://yt3.googleusercontent.com/Bh5YI5IVd53atK2LaTUudu3hqyrJNL8SSUa3DTWOlmtW69qcE9V5wZmAoNLrHKhNvltKB4rZDQ=s900-c-k-c0x00ffffff-no-rj",
+                imageUri: "https://i.imgur.com/58ZabsN.png",
               });
             }}
           >
             <div className="relative w-full h-full overflow-clip rounded-xl">
               <Image
-                src={
-                  "https://yt3.googleusercontent.com/Bh5YI5IVd53atK2LaTUudu3hqyrJNL8SSUa3DTWOlmtW69qcE9V5wZmAoNLrHKhNvltKB4rZDQ=s900-c-k-c0x00ffffff-no-rj"
-                }
+                src={"https://i.imgur.com/58ZabsN.png"}
                 alt="Logo"
                 loader={({ src }) => src}
                 fill
@@ -185,7 +182,7 @@ const About: NextPage = () => {
               />
             </div>
             <span className="text-white text-sm md:text-xl font-bold pt-1 md:pt-2">
-              Dev DAO
+              ETHIndia
             </span>
           </div>
         </div>
